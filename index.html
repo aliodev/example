@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practise</title>
+	<style>
+		* {
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+		}
+
+		body {
+			font-family: sans-serif;
+                  font-size: 10px;
+			/* padding: 1rem;   */
+           }
+
+        header {
+        	position: relative;
+        	background: linear-gradient(to left, rgb(112, 161, 255, .4), rgb(30, 144, 255, .4)),
+        	            url("three.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center;             
+
+        	height: 100vh;
+        	/* clip-path: polygon(100% 18%, 100% 84%, 0 67%, 0 0); */
+        }
+
+        .main-header {
+          position : absolute;
+          left: 50%;
+          top: 40%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          text-transform: uppercase;
+          backface-visibility: hidden;
+        }
+
+        .heading, .title {
+        	color: #fff;
+        	display: block;
+        	margin-bottom: 2rem;
+              color:green;
+        }
+
+        .heading {
+            font-size: 2rem;  
+        	letter-spacing: 1rem;
+            animation: heading .7s ease-out;
+        }
+
+        .title {
+        	font-size: 1.1rem;
+        	letter-spacing: .5rem;
+        	animation: title .7s ease-out;
+        }
+
+        .btn:link, .btn:visited {
+           text-decoration: none;  
+           display: inline-block;
+           color: #4b4b4b;
+           background-color: #fff;
+           padding: 1rem 4rem;
+           border-radius: 10rem;
+           transition: transform .4as ease-out;
+           font-size: 1rem;
+           font-weight: 700;
+           
+        }
+
+        .btn:hover {
+        	transform: translateY(-.1rem);
+        	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .7);
+          }      
+
+        .btn:active {
+        	transform: translateY(1px);
+        	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes heading {
+        	0% {
+               opacity: 0;
+               transform: translateX(-100px);
+        	}
+
+        	80% {
+              transform: translateX(10px);
+        	}
+
+        	100% {
+               opacity: 1;
+               transform: translateX(0);
+        	}
+        }
+
+        @keyframes title {
+        	0% {
+               opacity: 0;
+               transform: translateX(100px);
+        	}
+
+        	80% {
+              transform: translateX(-10px);
+        	}
+
+        	100% {
+               opacity: 1;
+               transform: translateX(0);
+        	}
+         } 
+
+         @keyframes btn {
+        	0% {
+               opacity: 0;
+               transform: translateY(40px);
+        	}
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+        	}
+         } 
+
+         .btn-animated {
+            animation: btn .7s ease-out .8s;
+            animation-fill-mode: backwards;
+         }
+
+
+	</style>
+</head>
+<body>
+   <header>
+   	<div class="main-header">
+	   	<h1>
+	   		<span class="heading">a pracitse site</span>
+	   		<span class="title">that's will change your mind</span>
+	   	</h1>
+	   	<a href="second.html" class="btn btn-animated">please click</a>
+         </div>
+          
+   </header>
+</body>
+</html>
